@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is providing a summary on the use of data structures and algorithms">
+    <title>DSA-technical-documentation-page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top_nav">
+        <div class="top_nav_left">
+            <div class="title_logo">
+                <img src="page_logo.png" alt=" " id="logo">
+                <h1>Data Structures and Algorithms</h1>
+            </div>
+            <div class="rounds">
+                <div class="round_line_top">
+                    <div class="round_line_middle">
+                        <div class="round_line_bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top_nav_right">
+            <a href="#Introduction">AboutUs</a>
+            <a href="#Explore">Explore</a>
+        </div>
+    </div>
+
+    <main id="main-doc"> 
+        
+        <div class="content">
+            <nav id="navbar">
+                <h1>Data Structures and Algorithms</h1>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+                <a class="nav-link" href="#Time_and_Space_Complexity">Time and Space Complexity</a>
+                <a class="nav-link" href="#Arrays">Arrays</a>
+                <a class="nav-link" href="#Linked_Lists">Linked Lists</a>
+                <a class="nav-link" href="#Stack">Stack</a>
+                <a class="nav-link" href="#Queue">Queue</a>
+                <a class="nav-link" href="#Tree">Tree</a>
+                <a class="nav-link" href="#Graph">Graph</a>
+                <a class="nav-link" href="#Searching_and_Sorting_Algorithms">Searching and Sorting Algorithms</a>
+                <a class="nav-link" href="#Hashing">Hashing</a>
+                <a class="nav-link" href="#Explore">Explore</a>
+            </nav>
+        </div>
+        <div class="documentation">
+   <!--     <div class="documentation"> -->
+    <!--         <div class="sub_documentation"> -->
+             <div class="introduction_top_class">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h1>Introduction</h1>
+                </header>
+                <p>
+                    <strong>Data Structures and Algorithms</strong> (DSA) refer to the study of methods for organizing and storing data 
+                    and the design of procedures (algorithms) for solving problems, which operate on these data structures. 
+                    DSA is one of the most important skills that every back-end developer or full-stack developer must have.<br>
+                    It is often seen that people with good knowledge of these technologies are better programmers than others and thus, 
+                    crack the interviews of almost every tech giant, including companies like Google, Microsoft, Amazon, and Facebook 
+                    (now Meta). <br>
+                    On this page we will cover a brief overview of <strong>Data Structures and Algorithms</strong>,you can click explore to view more.
+                </p>
+                <h3>Types of Data Structures</h3>
+                <ul>
+                    <li><span class="types"><ins>Linear data structures:</ins></span> these are data structures where data elements are arranged linearly or sequentially.
+                    <br><ins>Example:</ins>Arrays,Linked Lists,Stack,Queue etc...</li><br>
+                    <li><span class="types"><ins>Non-linear data structures:</ins></span> these are data structures where data elements don't stay arranged linearly or sequentially.
+                    <br><ins>Example:</ins>Trees,Graphs etc...</li>
+                </ul>
+                <div class="DSA_Illustration">
+                    <div class="DS_Illustration">
+                        <span class="circle_DS"><h4><ins>Data Structures</ins></h4></span>
+                        <ul class="incircle_list_DS">
+                            <li>&#11162;Arrays</li>
+                            <li>&#11162;Linked List</li>
+                            <li>&#11162;Stack</li>
+                            <li>&#11162;Queue</li>
+                            <li>&#11162;Trees</li>
+                            <li>&#11162;Graphs</li>
+                            <li>&#11162;Hash Map</li>
+                        </ul>
+                        <span class="intersection">D<br><br>S<br><br>A</span>
+                    </div>                    
+                    <div class="A_Illustration">
+                        <span class="circle_A"><h4><ins>Algorithms</ins></h4></span>
+                        <ul class="incircle_list_A">
+                            <li>&#11162;Searching</li>
+                            <li>&#11162;Sorting</li>
+                            <li>&#11162;Greedy</li>
+                            <li>&#11162;Recursion</li>
+                            <li>&#11162;Divide and<br>Conquer</li>
+                            <li>&#11162;Dynamic<br>Programming</li> 
+                        </ul> 
+                    </div>            
+                </div>                    
+            </section>
+        </div>
+            <div class="time_and_space_complexity">
+            <section class="main-section" id="Time_and_Space_Complexity">
+                <header>
+                    <h1>Time and Space Complexity</h1>
+                </header>
+            <p>
+                In Data Structures and Algorithms (DSA), 
+                the main goal is to solve problems effectively and efficiently. <br>
+                To determine the efficiency of a program, welook at two types of complexities:
+            </p>
+            <ol>
+                <li><span class="types"><ins>Time Complexity:</ins></span> This tells us how much time our code takes to run.</li>
+                <li><span class="types"><ins>Space Complexity:</ins></span> This tells us how much memory our code uses.</li>
+            </ol>
+            <h3>Asymptotic Notation</h3>
+            <p>
+                To compare efficiencies of algorithms, we use asymptotic notation, 
+                a mathematical tool that estimates time based on input size without running the code. 
+                It focuses on the number of basic operations in the program.
+            </p>
+            <table class="all_tables">
+                <tr class="row1">
+                    <th class="col1">Notation</th>
+                    <th class="col2">Description</th>
+                </tr>
+                <tr>
+                    <td class="table_cell_notation">Big-O (O)</td>
+                    <td class="table_cell_description">
+                        Describes the worst-case scenario, 
+                        providing an upper time bound of algorithm.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_cell_notation">Omega (&#937)</td>
+                    <td class="table_cell_description">
+                        Describes the best-case scenario,
+                        offering a lower time bound of algorithm.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_cell_notation">Theta(&#952)</td>
+                    <td class="table_cell_description">
+                        Represents the average complexity of an algorithm of 
+                        an algorithm.
+                    </td>
+                </tr>
+            </table>
+            <p>
+                The most commonly used notation for code analysis is Big O Notation, 
+                providing an upper limit on the running time or memory usage 
+                concerning the input size.
+            </p>
+            </section> 
+            </div>
+            <div class="arrays_top_class">
+            <section class="main-section" id="Arrays">
+                <header>
+                    <h1>Arrays</h1>
+                </header>
+                <p>
+                    <strong>Array</strong> is a linear data structure that stores a collection of elements of the same data type. 
+                    Elements are allocated contiguous memory, allowing for constant-time access. 
+                    Each element has a unique index number.
+                </p>
+                <h3>Operations on Array</h3>
+                <ul>
+                    <li>
+                        <span class="types">Traversal:</span>
+                        Iterating through the elements of an array.
+                    </li>
+                    <li>
+                        <span class="types">Insertion: </span>
+                        Adding an element to the array at a specific index.
+                    </li>
+                    <li>
+                        <span class="types">Deletion:</span>
+                        Removing an element from the array at a specific index.</span>
+                    </li>
+                    <li>
+                        <span class="types">Searching:</span>
+                        Finding an element in the array by its value or index.
+                    </li>
+                </ul>
+                <h3>Memory Illustration of Array</h3>
+                <p>This is how data is arranged in memory when an array is used:</p>
+                <div class="array">
+                    <div class="memory_array">
+                        Data:1
+                        <span>index:0</span>
+                    </div>
+                    <div class="memory_array">
+                        Data:2
+                        <span>index:1</span>
+                    </div>
+                    <div class="memory_array">
+                        Data:3
+                        <span>index:2</span>
+                    </div>
+                    <div class="memory_array">
+                        Data:4
+                        <span>index:3</span>
+                    </div>
+                    <div class="memory_array">
+                        Data:5
+                        <span>index:4</span>
+                    </div>
+                </div>
+                <p>
+                    The data in array is stored linearly at a certain index.
+                </p>
+                <h3>Array declaration in C Language</h3>
+                <div class="code">
+                    <code>
+                        int main () { <br>
+                            /*The declared array is of integer data type<br>
+                            but arrays can be of different data types*/<br>
+                            int array[5] = {1,2,3,4,5};<br>
+                            for (int i = 0; i<5; i++) { <br>
+                            printf("%d ",array[i]); <br>
+                            }<br>
+                            return 0;<br>
+                        }<br>
+                        Output: 1 2 3 4 5
+                    </code>
+                </div>
+            </section>
+            </div>
+            <div class="linked_list_top_class">
+            <section class="main-section" id="Linked_Lists">
+                <header>
+                    <h1>Linked Lists</h1>
+                </header>
+                <p>
+                    <strong>Linked List</strong> is a linear data 
+                    structure that stores data in nodes,which are connected by pointers. 
+                    Unlike arrays, linked lists are not stored in contiguous memory locations. 
+                </p>
+                <h3>Operations on Linked List</h3>
+                <ul>
+                    <li>
+                        <span class="types">Creation:</span>
+                        Creating a new linked list or adding a new node to an existing list.
+                    </li>
+                    <li>
+                        <span class="types">Traversal:</span>
+                        Iterating through the list and accessing each node.
+                    </li>
+                    <li>
+                        <span class="types">Insertion: </span>
+                        Adding a new node at a specific position in the list.  
+                    </li>
+                    <li>
+                        <span class="types">Deletion: </span>
+                        Removing a node from the list.
+                    </li>
+                    <li>
+                        <span class="types">Search:</span>
+                        Finding a node with a specific value in the list.
+                    </li>
+                </ul>
+                <h3>Memory Illustration of linked list</h3>
+                <p>This is how data is arranged in memory when a linked list is used:</p>
+                <div class="linked_list">
+                    <div class="head_arrow">&#10549;</div>
+                    <div class="list_arrow1">&#8631;</div>
+                    <div class="list_arrow2">&#8631;</div>
+                    <div class="tail_arrow">&#10551;</div>
+                    <div class="head_pointer">
+                        Header Pointer<hr>
+                        Next-Node:100
+                    </div>
+                    <div class="memory_linked_list">
+                        Node Adress:100<hr>
+                        Data:1<hr>
+                        Next-Node:200
+                    </div>
+                    <div class="link1_demonstration">&#8599;</div>
+                    <div class="memory_linked_list">
+                        Node Adress:200<hr>
+                        Data:2<hr>
+                        Next-Node:300
+                    </div>
+                    <div class="link_demonstration">Links<br>connecting<br>nodes</div>
+                    <div class="link2_demonstration">&#8598;</div>
+                    <div class="memory_linked_list">
+                        Node Adress:300<hr>
+                        Data:3<hr>
+                        Next-Node:null
+                    </div>
+                    <div class="tail_pointer">
+                        Tail Pointer<hr>
+                        Adress:300
+                    </div>
+                </div>
+                <p>
+                    The data in linked list is stored linearly in nodes, whereby 
+                    the address of the first node is always kept by the a head pointer and 
+                    the address of the last node is kept by the a tail pointer.<br>
+                </p>
+                <h3>Linked List declaration in C Language</h3>
+                <div class="code">
+                    <code>
+                        struct node {<br>
+                            int data;<br>
+                            struct node *next;<br>
+                        };<br>
+                        struct node*head,*tail;<br>
+                        /*Every every node must contain the address <br>of the next node or previous node according <br>
+                        to the type of linked list you are using.<br>
+                        Note that we have demonstrated a<br> <strong>Singly Linked List</strong>.<br>*/
+                    </code>
+                </div>
+            </section>
+            </div>
+           <div class="stack_top_class">
+            <section class="main-section" id="Stack">
+                <header>
+                    <h1>Stack</h1>
+                </header>
+                <p>
+                    Stack is a linear data structure that follows a particular order in which the operations are performed.<br>
+                    The order may be <strong>LIFO(Last In First Out)</strong> or <strong>FILO(First In Last Out).</strong><br> <strong>LIFO</strong> implies that the element that is inserted last,
+                    comes out first and <strong>FILO</strong> implies that the element that is inserted first, comes out last.
+                </p>
+                <h3>Operations on Stack</h3>
+                <ul>
+                    <li>
+                        <span class="types">Push:</span>
+                        Adds an element to the top of the stack.
+                    </li>
+                    <li>
+                        <span class="types">Pop:</span>
+                        Removes and returns the element at the top of the stack.
+                    </li>
+                    <li>
+                        <span class="types">Peek:</span>
+                        Returns the element at the top of the stack without removing it.</span>
+                    </li>
+                    <li>
+                        <span class="types">Size:</span>
+                        Returns the number of elements in the stack.
+                    </li>
+                    <li>
+                        <span class="types">IsEmpty:</span>
+                        Checks if the stack is empty.
+                    </li>
+                </ul>
+                <h3>Memory Illustration of Stack</h3>
+                <div class="stack">
+                    <div class="stack1">
+                        <div class="pop_msg">Pop<br>data</div>
+                        <div class="push_msg">Push<br>data</div>
+                        <div class="pop_arrow">&#8631;</div> 
+                        <div class="push_arrow">&#8631;</div>
+                        <div class="stack_data4">
+                            <p style="text-align: center;">Data 4</p>
+                        </div>
+                        <div class="memory_stack"> 
+                            <div class="stack_data">
+                                <p style="text-align: center;">Data 3</p>
+                            </div>
+                            <div class="stack_data">
+                                <p style="text-align: center;">Data 2</p>
+                            </div>
+                            <div class="stack_data">
+                                <p style="text-align: center;">Data 1</p>
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="stack2">
+                        <div class="pop_msg">Pop<br>data</div>
+                        <div class="push_msg">Push<br>data</div>
+                        <div class="pop_arrow">&#8631;</div> 
+                        <div class="push_arrow">&#8631;</div>
+                        <div class="stack_data5">
+                            <p style="text-align: center;">Data 3</p>
+                        </div>
+                        <div class="memory_stack"> 
+                            <div class="stack_data">
+                                <p style="text-align: center;">Data 2</p>
+                            </div>
+                            <div class="stack_data">
+                                <p style="text-align: center;">Data 1</p>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Data in stack is always kept in such a way that the user will access the last
+                    inputted data.<br>Example <i>History</i> on web pages, the last accessed website 
+                    is the first one to appear in the <i>History</i>.
+                </p>
+                <h3>Stack declaration in C Language</h3>
+                <div class="code">
+                    <code>
+                        int main () {<br>
+                            int stack[3];<br>
+                            int top = -1;<br>
+                            /*A stack can be declared in form of arrays or 
+                            linked lists according to your requirements
+                            to enter elements in the stack you increment the top variable
+                            so that as long as it reaches the stack limits it displays an overflow. 
+                            */<br>
+                        }
+                    </code>
+                </div>
+            </section>
+            </div>
+            <div class="queue_top_class">
+            <section class="main-section" id="Queue">
+                <header>
+                    <h1>Queue</h1>
+                </header>
+                <p>
+                    <strong>Queue</strong> Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order.
+                    It follows the principle of “First in, First out” (FIFO), where the first element added to the queue is the first one to be removed.
+                </p>
+                <h3>Operations on Queue</h3>
+                <ul>
+                    <li>
+                        <span class="types">Enqueue:</span>
+                        Adds an element to the rear of the queue.
+                    </li>
+                    <li>
+                        <span class="types">Dequeue:</span>
+                        Removes an element from the front of the queue.
+                    </li>
+                    <li>
+                        <span class="types">Peek:</span>
+                        Retrieves the front element without removing it.
+                    </li>
+                    <li>
+                        <span class="types">IsEmpty:</span>
+                        Checks if the queue is empty.
+                    </li>
+                    <li>
+                        <span class="types">IsFull:</span>
+                        Checks if the queue is full.
+                    </li>
+                </ul>    
+                    <h3>Memory Illustration of Queue</h3>
+                    <div class="queue">
+                        <div class="memory_queue">
+                            <div class="dequeue_arrow">&#10554;</div>
+                            <div class="enqueue_arrow">&#10552;</div>
+                            <div class="dequeue_msg">Data 1<br>Dequeued<br>Front</div>
+                            <div class="enqueue_msg">Data 5<br>Enqueued<br>Rear</div>
+                            <div class="queue_title">Queue</div>
+                            <div class="queue_line_top"></div>
+                            <div class="queue_line_down"></div> 
+                            <div class="queue_data first">Data 1</div>
+                            <div class="queue_data">Data 2</div>
+                            <div class="queue_data">Data 3</div>
+                            <div class="queue_data">Data 4</div>
+                            <div class="queue_data last">Data 5</div>
+                        </div>
+                    </div>
+                <p>
+                    Data in queue is always kept in such a way that 
+                    the user will access the first inputted data.
+                </p>
+            <h3>Queue declaration in C Language</h3>
+            <div class="code">
+                <code>
+                    int main () {<br>
+                        int queue[3];<br>
+                        int rear = -1;<br>
+                        int front = -1;<br>
+                        /*A queue can be declared in form of arrays or linked lists according to your requirements
+                        to enter first element in the queue you increment the rear and front variable
+                        so that as long as it reaches the queue limits it displays an overflow.<br>
+                        For continous operations<br>
+                        Front is incremented to dequeue the data from the queue whereby
+                        Rear is incremented to enqueue the data from the queue.
+                        */<br>
+                    }
+                </code>
+            </div>
+            </section>
+            </div>
+            <div>
+            <section class="main-section" id="Tree">
+                <header>
+                    <h1>Tree</h1>
+                </header>
+                <p>
+                    <strong>Tree</strong> is a non-linear hierarchical data structure consisting of nodes connected by edges, 
+                    with a top node called the root and nodes having child nodes.
+                </p>
+                <h3>Types of trees according to their degree</h3>
+                <ul>
+                    <li>
+                        <span class="types">Binary Tree:</span>
+                        it's a tree where each node has at most 2 childen.
+                    </li>
+                    <li>
+                        <span class="types">Ternary Tree:</span>
+                        it's a tree where each node has at most 3 childen.
+                    </li>
+                    <li>
+                        <span class="types">N-Ary Tree:</span>
+                        it's a tree where each node has N number childen.
+                    </li>
+                </ul>
+                <h3>Memory Illustration of Tree</h3>
+                <div class="tree">
+                    <div class="memory_tree">
+                        <div class="tree_edge left_one">&#8601;</div>
+                        <div class="tree_edge left_two">&#8601;</div> 
+                        <div class="tree_edge right_one">&#8600;</div>
+                        <div class="tree_edge right_two">&#8600;</div> 
+                        <div class="edge_tree_arrow">&#8672;</div>
+                        <div class="edge_tree_arrow_msg">
+                        <span>Tree edges which<br>help nodes<br>to connect.
+                        </div>
+                        <div class="tree_data one">
+                            Child of root node<hr>
+                            Data:1<hr>
+                            Leaf node
+                        </div>
+                        <div class="tree_data two">
+                            Root node<hr>
+                            Data:2
+                        </div>
+                        <div class="tree_data three">
+                            Child of root Node<hr>
+                            Data:3<hr>
+                            Inner node
+                        </div>
+                        <div class="tree_data four">
+                            Child of Data:3<hr>
+                            Data:4<hr>
+                            Leaf node
+                        </div>
+                        <div class="tree_data five">
+                            Sibling of Data:4<hr>
+                            Data:5<hr>
+                            Leaf node
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The tree above is a binary tree because every node has a maximum of 2 childs.<br>
+                    Keep in mind that even if one node can have a single child or no child it does not change the fact
+                    that it still remains a binary tree.
+                </p>
+                <h3>Tree declaration in C language</h3>
+                <div class="code">
+                    <code>
+                        struct node {<br>
+                            int data;<br>
+                            struct node *left_child,*right_child;<br>
+                        }<br>
+                        /*This is a declaration of a binary tree where each node will have where 
+                        to put the data and the point of connection to it's childs if it's not a leaf node.
+                        */
+                    </code>
+                </div>
+                    <h3>Applications of Trees</h3>
+                    <ul>
+                        <li>File systems</li>
+                        <li>Databases</li>
+                        <li>XML documents</li>
+                        <li>Artficial intelligence</li>
+                    </ul>
+            </section>
+            </div>
+            <div class="graph_top_class">
+            <section class="main-section" id="Graph">
+                <header>
+                    <h1>Graph</h1>
+                </header>
+                <p>
+                    <strong>Graph</strong> is a non-linear data structure consisting of a finite set of 
+                    vertices(or nodes) and a set of edges that connect nodes.<br>
+                    Unlike trees, graphs don't have a spefic root node, means that you can traverse a graph
+                    from any node.<br>
+                </p>
+                <h3>Types of Graphs</h3>
+                <table class="all_tables">
+                    <tr style="height:5rem" class="graph_table_row1">
+                        <th style="width:24rem" colspan="2">According to the direction</th>
+                        <th style="width:24rem" colspan="2">According to the weights</th>
+                    </tr>
+                    <tr>
+                        <th style="width:12rem" class="graph_table_data">
+                            Directed Graphs
+                        </th>
+                        <th style="width:12rem" class="graph_table_data">
+                            Undirected Graphs
+                        </th>
+                        <th style="width:12rem" class="graph_table_data">
+                            Weighted Graphs
+                        </th>
+                        <th style="width:12rem" class="graph_table_data">
+                            Unweighted Graphs
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="graph_table_data">
+                            They are graphs where edges have direction.
+                        </td>
+                        <td class="graph_table_data">
+                            They are graphs where edges do not have direction.
+                        </td>
+                        <td class="graph_table_data">
+                            They are graphs where edges have weights or 
+                            a numerical value attached on each edge.
+                        </td>
+                        <td class="graph_table_data">
+                            They are graphs where edges do not have weights or 
+                            a numerical value attached on each edge.
+                        </td>
+                    </tr>
+                </table>
+                <h3>Memory Illustration of Graphs</h3>
+                <div class="graph">
+                    <div class="memory_graph">
+                        <div class="graph_edge one"></div>
+                        <div class="graph_edge two"></div>
+                        <div class="graph_edge three"></div>
+                        <div class="graph_distance one">100 km</div>
+                        <div class="graph_distance two">200 km</div>
+                        <div class="graph_distance three">300 km</div>
+                        <div class="graph_data one">Kabeza City</div>
+                        <div class="graph_data two">Kimironko City</div>
+                        <div class="graph_data three">Kanombe City</div>
+                    </div>
+                </div>
+                <h3>Graph declaration in C Language</h3>
+                <div class="code">
+                    <code>
+                        struct neighbour {<br>
+                            char neighbour_name;<br>
+                            int edge_weight;<br>
+                            int neigbhour_index;<br>
+                        }<br>
+                        struct node {<br>
+                            int index;<br>
+                            char state_name;<br>
+                            struct neighbour neighbour_array[2];<br>
+                        }<br>
+                        /*This is a general declaration of a graph data structure in C language whereby
+                        neighbour variable represents all cities which are connected with a certain city.<br>
+                        Note that city are nodes or vertices.<br>
+                        The edges_weight are the distance between one city and another.
+                        */
+                    </code>
+                </div>
+                <h3>Applications of Graphs</h3>
+                <ul>
+                    <li>Maps and navigation</li>
+                    <li>Social networks</li>
+                    <li>Scheduling</li>
+                    <li>Data mining</li>
+                </ul>
+            </section>
+            </div>
+            <div class="searching_and_sorting_top_class">
+            <section class="main-section" id="Searching_and_Sorting_Algorithms">
+                <header>
+                    <h1>Searching and Sorting Algorithms</h1>
+                </header>
+                <h2>Sorting Algorithms</h2>
+                <p>
+                    <strong>Sorting algorithms</strong> are used to arranging the elements of a list in a specific order, 
+                    such as numerical or alphabetical. It organizes the items in a systematic way,
+                    making it easier to search for and access specific elements.
+                </p>
+                <h3>Some types of sorting algorithms</h3>
+                <p>
+                    There are a lot of different types of sorting algorithms. 
+                    Some widely used algorithms are:
+                </p>
+                <table class="all_tables">
+                    <tr class="sorting_table_row1">
+                        <th style="max-width:10rem">Sorting Algorithms</th>
+                        <th style="max-width:30rem">Description</th>
+                    </tr>
+                    <tr>
+                        <td  class="sort_table_data">
+                            Bubble Sort
+                        </td>
+                        <td class="sort_table_data">
+                            Iteratively compares adjacent elements and swaps them if they are out of order. 
+                         
+                            The largest element “bubbles” to the end of the list with each pass.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sort_table_data">
+                            Selection Sort	
+                        </td>
+                        <td class="sort_table_data">
+                            Finds the minimum element in the unsorted 
+                            portion of the list and swaps it with the first element. 
+                            Repeats this process until the entire list is sorted.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sort_table_data">
+                            Insertion Sort     
+                        </td>
+                        <td class="sort_table_data">
+                            Builds the sorted list one element at a time by inserting each 
+                            unsorted element into its correct position in the sorted portion.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sort_table_data">
+                            Quick Sort    
+                        </td>
+                        <td class="sort_table_data">
+                            A divide-and-conquer algorithm that selects a pivot element,
+                            partitions the list into two sublists based on the pivot, 
+                            and recursively applies the same process to the sublists.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sort_table_data">
+                            Merge Sort
+                        </td>
+                        <td class="sort_table_data">
+                            Another divide-and-conquer algorithm that recursively divides the list into smaller sublists, 
+                            sorts them, and then merges them back together to obtain the sorted list.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sort_table_data">
+                            Heap Sort
+                        </td>
+                        <td class="sort_table_data">
+                            Uses the binary heap to sort elements by heapfying and extracting the data.
+                        </td>
+                    </tr>
+                </table>
+                <h3>Sorting algorithm Illustration</h3>
+                <div class="searching_and_sorting">
+                     <div class="searching_and_sorting_unsorted">
+                         <div class="memory_searching_and_sorting_1">Nairobi</div>
+                         <div class="memory_searching_and_sorting_1">Kigali</div>
+                         <div class="memory_searching_and_sorting_1">Bujumbura</div>
+                         <div class="memory_searching_and_sorting_1">Kampala</div>
+                         <div class="memory_searching_and_sorting_1">Kinshasa</div>
+                         <div class="unsorted_list_msg">This is an example of an unsorted list</div>
+                     </div>
+                     <div class="searching_and_sorting_sorted">
+                        <div class="memory_searching_and_sorting_2">Nairobi</div>
+                        <div class="memory_searching_and_sorting_2">Kinshasa</div>
+                        <div class="memory_searching_and_sorting_2">Kigali</div>
+                        <div class="memory_searching_and_sorting_2">Kampala</div>
+                         <div class="memory_searching_and_sorting_2">Bujumbura</div>
+                         <div class="sorted_list_msg">This is an example of a sorted list</div>
+                     </div>
+                </div>
+                <h3>Sorting algorithm implementation in C Language</h3>
+                <div class="code">
+                     <code>
+                        for (int i = 0; i<maximum_number_of_cities; i++) {    <br>
+                            flag = 0;    <br>
+                            for (int i = 0; i<maximum_number_of_cities; i++) {    <br>
+                            comparison = strcmp (cities_name[i],cities_name[i+1]);
+                            if (comparison < 0) {    <br>
+                            strcpy (word,cities_name[i+1]);    <br>
+                            strcpy (cities_name[i+1],cities_name[i]);    <br>
+                            strcpy (cities_name[i],word)    <br>
+                            flag++; <br>
+                            }   <br>
+                            }   <br>
+                            if (flag == 0) {    <br>
+                            break;  <br>
+                            }   <br>
+                            }       <br>
+                            /*This code is using the bubble sort algorithm whereby it arranges the cities's name 
+                            in descending order alphabetically.
+                            */
+                     </code>
+                </div>
+                <h2>Searching algorithms</h2>
+            <p>
+                Searching algorithms are used to locate specific data within a larger set of data. 
+                It helps find the presence of a target value within the data. 
+            </p>
+           <h3>Some types of searching algorithms </h3>
+           <ul>
+            <li>
+                <span class="types">Linear Search:</span>
+                Iterative search from one end to the other.
+            </li>
+            <li>
+                <span class="types">Binary Search: </span>
+                Divide-and-conquer search on a sorted array, 
+                halving the search space at each iteration.
+            </li>
+            <li>
+                <span class="types">Ternary Search: </span>
+                Divide-and-conquer search on a sorted array, 
+                dividing the search space into three parts at each iteration.
+            </li>
+           </ul>
+           <h3>Searching algorithm implementation in C Language</h3>
+            <div class="code">
+                <code>
+                    void function (char name[10]) { <br>
+                    for (int i = 0; i<maximum_number_of_cities; i++) {<br>
+                        comparison = strcmp (name,cities_name[i]);<br>
+                        if (comparison == 0) {<br>
+                            printf ("City name %s is found",cities_name[i]);<br>
+                        }<br>
+                    }<br>
+                    }<br>
+                    /*This code is using linear_search algorithm and this function receives a name of a given city and search in an array
+                    of cities_name and it prints the city's name if it's found in that array*/
+                </code>
+            </div>
+            </section>
+            </div>
+            <div class="hashing_top_class">
+            <section class="main-section" id="Hashing">
+                <header>
+                    <h1>Hashing</h1>
+                </header>
+                <p>
+                    <strong>Hashing</strong> is a technique that generates a fixed-size output from an input 
+                    of variable size using mathematical formulas called<strong> hash functions</strong>. <br>
+                    <strong>Hashing</strong> is used to determine an index or location for storing an item in a data structure, 
+                    allowing for efficient retrieval and insertion.
+                </p>
+                <h3>Key Concepts in Hash</h3>
+                <ul>
+                    <li>
+                        <span class="types">Hash Function: </span>
+                        A mathematical function that maps an input to a hash value.
+                    </li>
+                    <li>
+                        <span class="types">Hash Table: </span>
+                        A data structure that stores key-value pairs, where the key is a hash value and the value is the actual data.
+                    </li>
+                    <li>
+                        <span class="types">Collision:</span> 
+                        When two different keys produce the same hash value.
+                    </li>
+                </ul>
+                <h3>Hashing Illustration</h3>
+                <div class="hashing">
+
+                    <div class="hash_function">
+                        Hash Function<hr>
+                        <ins>Formula</ins>:Data%5<br>
+                        <ins>Example</ins>:6%5 = 1<br>
+                        This hash function will return
+                        1 means data 6 is at index 1.
+                    </div>
+                    <div class="hash_table">
+                        <table class="all_tables">
+                            <tr class="hash_table_row1">
+                                <th colspan="2" class="hash_table_data">Hash Table</th>
+                            </tr>
+                            <tr class="hash_table_row1">
+                                <th style="width:7rem" class="hash_table_data">Index</th>
+                                <th style="width:12rem" class="hash_table_data">Data</th>
+                            </tr>
+                            <tr>
+                                <td class="hash_table_data">0</td>
+                                <td class="hash_table_data">5</td>
+                            </tr>
+                            <tr>
+                                <td class="hash_table_data">1</td>
+                                <td class="hash_table_data">6</td>
+                            </tr>
+                            <tr>
+                                <td class="hash_table_data">2</td>
+                                <td class="hash_table_data">null</td>
+                            </tr>
+                            <tr>
+                                <td class="hash_table_data">3</td>
+                                <td class="hash_table_data">28</td>
+                            </tr>
+                            <tr>
+                                <td class="hash_table_data">4</td>
+                                <td class="hash_table_data">null</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            </div>
+            <div class="explore_top_class">
+            <section class="main-section" id="Explore">
+                <header>
+                    <h1>Explore</h1>
+                </header>
+                <div class="explore">
+                    <div class="explore_geeks">
+                            <p>Explore more by reading documentations</p>
+                            <a href="https://www.geeksforgeeks.org/data-structures/"  target="_blank">View more</a>
+                        </div>
+                        <div class="explore_youtube">
+                            <p>Explore more on youtube</p>
+                            <a href="https://www.youtube.com/watch?v=XCyuHSJS7XE&list=PLIY8eNdw5tW_zX3OCzX7NJ8bL1p6pWfgG" target="_blank">View more</a>
+                  <!--      </div> -->
+                </div>
+            </section>
+            </div>
+             </div>
+        </div>      
+    </main>
+    <footer>
+        <hr>
+        <p style="text-align: center">Click <a style="color:green" href="https://github.com/Ben22-Dev" target="_blank">me</a> to contact the developer</p>
+        <p style="text-align: center">&copy;Ben22-Dev</p>
+    </footer>
+</body>
+</html>
